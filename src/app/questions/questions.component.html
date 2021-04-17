@@ -1,0 +1,27 @@
+<p id="scoreView">Twoje punkty to: {{points}}</p>
+
+
+
+<p id="finishView" *ngIf="testFinish">
+  Gratulacje! Ukończyłeś test!
+  <br>
+  Czy chcesz spróbować jeszcze raz?
+  <br>
+  <button color="warm" mat-raised-button (click)="reloadPage()">Spróbuj ponownie</button>
+</p>
+
+<ng-container *ngFor="let q of questions">
+
+  <ul *ngIf="q.index === indexNum">
+    <p id="questionView">{{q.question}}</p>
+    <li><button color="accent" mat-raised-button class="answerButton" (click)="indexNumInc(); checkAnswer(1)">A:
+        {{q.answerOne}}</button></li>
+    <li><button color="accent" mat-raised-button class="answerButton" (click)="indexNumInc(); checkAnswer(2)">B:
+        {{q.answerTwo}}</button></li>
+    <li><button color="accent" mat-raised-button class="answerButton" (click)="indexNumInc(); checkAnswer(3)">C:
+        {{q.answerThree}}</button></li>
+    <li><button color="accent" mat-raised-button class="answerButton" (click)="indexNumInc(); checkAnswer(4)">D:
+        {{q.answerFour}}</button></li>
+  </ul>
+
+</ng-container>

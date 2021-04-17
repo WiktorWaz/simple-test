@@ -1,0 +1,28 @@
+header {
+  background-color: #000645;
+  color: #fff;
+}
+
+.mat-display-2 {
+  margin: 2% 0;
+}
+
+@media (max-width: 787px) {
+  .mat-display-2 {
+    font-size: 2rem;
+  }
+
+  .mat-headline {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mat-display-2 {
+    font-size: 1.6rem;
+  }
+
+  .mat-headline {
+    font-size: 1rem;
+  }
+}
